@@ -1,0 +1,186 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.display {
+  height: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.display span {
+  word-break: break-word;
+}
+
+
+.keypad {
+  padding: 10px;
+}
+
+.key-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.key {
+  background: #fff;
+  flex: 1;
+  height: 50px;
+  margin: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.key:hover {
+  background: #ddd;
+}
+
+.key:active {
+  background: #bbb;
+}
+
+.calculator {
+  background-color: #f5f5f5;
+  position: relative;
+  width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.history-panel {
+  position: relative;
+  right: 0;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.history-content,
+.memory-content {
+  overflow: auto;
+  min-height: 29vh;
+  max-height: 50vh;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-header h2 {
+  margin: 0;
+}
+
+.history-entry {
+  padding: 5px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.history-entry:last-child {
+  border-bottom: none;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+.delete-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 30px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.tab.active {
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+}
+
+.tab-content {
+  padding: 10px;
+}
+
+.tab:hover {
+  background-color: #89b5e5;
+}
+
+/* styles.css */
+.history-panel-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.history-panel-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-out, transform 0.5s ease-out;
+}
+
+.history-panel-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.history-panel-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
